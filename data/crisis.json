@@ -1,0 +1,59 @@
+{
+  "patterns": {
+    "self_harm": [
+      "hurt myself",
+      "harm myself",
+      "cut myself",
+      "cutting myself",
+      "self harm",
+      "self-harm",
+      "selfharm",
+      "injure myself",
+      "hurting myself"
+    ],
+    "suicide": [
+      "kill myself",
+      "end my life",
+      "take my life",
+      "want to die",
+      "don't want to live",
+      "not worth living",
+      "suicide",
+      "suicidal",
+      "no reason to live",
+      "better off dead",
+      "better off without me",
+      "ending it all",
+      "end it all"
+    ],
+    "abuse": [
+      "being abused",
+      "someone is hurting me",
+      "hitting me",
+      "beating me",
+      "sexually abused",
+      "domestic violence",
+      "in danger",
+      "scared of going home"
+    ]
+  },
+  "crisis_response": {
+    "heading": "You are not alone — please reach out right now",
+    "message": "What you are sharing sounds very serious, and your life has immense value. Please contact a crisis line or trusted person immediately. Sakinah is not equipped to provide emergency support — a trained person is waiting to help you right now.",
+    "prompt_scholar": "After you are safe, speaking with an imam, counsellor, or trusted family member can help. You do not have to face this alone."
+  },
+  "helplines": [
+    {
+      "name": "TODO: replace with verified national crisis line",
+      "number": "TODO: verify number before deployment",
+      "available": "TODO: verify hours",
+      "note": "UNVERIFIED PLACEHOLDER — do not deploy with this entry"
+    },
+    {
+      "name": "TODO: replace with verified local/regional line",
+      "number": "TODO: verify number before deployment",
+      "available": "TODO: verify hours",
+      "note": "UNVERIFIED PLACEHOLDER — do not deploy with this entry"
+    }
+  ]
+}

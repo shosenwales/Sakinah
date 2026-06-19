@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sakinah — Islamic Counseling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Welcome screen -->
+  <div id="screen-welcome" class="screen screen--active">
+    <div class="welcome">
+      <div class="welcome__body">
+        <div class="welcome__logo" aria-hidden="true">س</div>
+        <div>
+          <h1 class="welcome__headline">A calm space<br>to turn to.</h1>
+          <p class="welcome__sub">Faith-rooted comfort, any time, no judgment. Bring anything, however small or heavy.</p>
+        </div>
+      </div>
+      <div class="welcome__footer">
+        <button class="btn btn--primary" id="btn-start">
+          <span aria-hidden="true" style="color: #FBE6C2">✦</span> Start talking
+        </button>
+        <div class="welcome__trust">
+          <span>Private</span>
+          <span class="welcome__trust-dot"></span>
+          <span>No judgment</span>
+          <span class="welcome__trust-dot"></span>
+          <span>Always here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat screen -->
+  <div id="screen-chat" class="screen">
+
+    <header class="chat__header">
+      <button id="btn-back" aria-label="Back to welcome" style="border:none;background:transparent;cursor:pointer;color:var(--stone);padding:4px;display:inline-flex;align-items:center;">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="chat__avatar" aria-hidden="true">س</div>
+      <div class="chat__header-info">
+        <div class="chat__name">Sakinah</div>
+        <div class="chat__status">Islamic Counseling · Placeholder mode</div>
+      </div>
+    </header>
+
+    <main class="chat__messages" id="chat-messages" aria-live="polite" aria-label="Conversation"></main>
+
+    <div class="starters" id="starters"></div>
+
+    <footer class="composer">
+      <div class="composer__input-wrap">
+        <textarea
+          id="composer-textarea"
+          class="composer__textarea"
+          rows="1"
+          placeholder="Share what's on your mind…"
+          aria-label="Message"
+        ></textarea>
+      </div>
+      <button id="btn-send" class="composer__send" aria-label="Send message" disabled>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h13M13 6l6 6-6 6"/>
+        </svg>
+      </button>
+    </footer>
+
+  </div><!-- /screen-chat -->
+
+</div><!-- /app-shell -->
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "patience": [
+    {
+      "id": "patience-a",
+      "template": "Alhamdulillah that you shared this with me. What you are carrying takes real strength, and patience is not about suppressing your pain — it is about holding on through it.\n\nThis passage has brought comfort to many:\n\n\"{translation}\"\n— {reference}\n\nYou are not alone in this moment, and your struggle is seen."
+    },
+    {
+      "id": "patience-b",
+      "template": "Feeling stretched is deeply human. The tradition reminds us that patience (sabr) is an active, honoured state — not passive endurance, but a choice to keep going.\n\n\"{translation}\"\n— {reference}\n\nMay Allah grant you the strength to hold steady, one moment at a time."
+    }
+  ],
+  "gratitude": [
+    {
+      "id": "gratitude-a",
+      "template": "Thank you for opening up. Sometimes pausing to notice what we have — even small things — can gently shift the heart.\n\nThe tradition teaches:\n\n\"{translation}\"\n— {reference}\n\nMay this reminder be a source of warmth for you today."
+    },
+    {
+      "id": "gratitude-b",
+      "template": "Gratitude (shukr) in Islam is a living practice — recognising gifts even when life feels heavy. You reached out today; that itself is a kind of turning toward God.\n\n\"{translation}\"\n— {reference}\n\nMay your heart find ease in remembrance."
+    }
+  ],
+  "hope": [
+    {
+      "id": "hope-a",
+      "template": "Even in the darkest moments, our tradition insists that despair in God's mercy is never the right answer. There is always a door open.\n\n\"{translation}\"\n— {reference}\n\nHold onto this. The hardest chapters have endings too."
+    },
+    {
+      "id": "hope-b",
+      "template": "I hear you. When hope feels far away, these words have anchored many hearts before yours:\n\n\"{translation}\"\n— {reference}\n\nAllah's mercy is wider than any difficulty you are facing. You are still on the path."
+    }
+  ],
+  "anxiety": [
+    {
+      "id": "anxiety-a",
+      "template": "What you're feeling is real, and it makes sense that your heart is unsettled right now. You don't have to solve everything at once.\n\nThis has brought calm to many before you:\n\n\"{translation}\"\n— {reference}\n\nBreathe. You are held."
+    },
+    {
+      "id": "anxiety-b",
+      "template": "Anxiety can make everything feel louder. Our tradition offers a gentle anchor — bringing the mind back to the One who holds all things.\n\n\"{translation}\"\n— {reference}\n\nMay this be a small moment of stillness for you."
+    }
+  ],
+  "loss": [
+    {
+      "id": "loss-a",
+      "template": "Grief is one of the heaviest things a heart can carry. I'm truly sorry for what you are going through. Please know your pain is not invisible.\n\n\"{translation}\"\n— {reference}\n\nMay Allah grant you comfort and reunite you with what you love."
+    },
+    {
+      "id": "loss-b",
+      "template": "There is no shortcut through grief — the tradition acknowledges this, and honours tears as a sign of love. You are allowed to mourn.\n\n\"{translation}\"\n— {reference}\n\nYou are not forgotten, and neither is the one you miss."
+    }
+  ],
+  "forgiveness": [
+    {
+      "id": "forgiveness-a",
+      "template": "No matter what weighs on your conscience, the door of tawbah (return) is always open. This is one of Islam's most profound gifts.\n\n\"{translation}\"\n— {reference}\n\nAllah's mercy has no ceiling. Your turning back is enough."
+    },
+    {
+      "id": "forgiveness-b",
+      "template": "Guilt can be crushing, but guilt that leads you back to God is a mercy in disguise. You reached out — that is already a step toward Him.\n\n\"{translation}\"\n— {reference}\n\nMay you find peace in knowing you are never beyond reach."
+    }
+  ]
+}
