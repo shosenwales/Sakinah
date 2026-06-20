@@ -22,7 +22,16 @@ def build():
     with open(CORPUS_PATH, encoding="utf-8") as f:
         corpus = json.load(f)
 
-    texts = [entry["translation"] for entry in corpus]
+    # Index each passage by its translation plus the human-written context note and
+    # theme labels. The displayed Arabic/translation stay verbatim; this only enriches
+    # the matching representation so short or abstract verses still retrieve well for
+    # emotional, first-person queries.
+    def index_text(entry):
+        parts = [entry["translation"], entry.get("context_note", "")]
+        parts += entry.get("themes", [])
+        return " ".join(p for p in parts if p)
+
+    texts = [index_text(entry) for entry in corpus]
     ids = [entry["id"] for entry in corpus]
 
     print(f"Loading model {MODEL_NAME} ...")

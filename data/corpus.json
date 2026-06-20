@@ -122,37 +122,71 @@
     "verified_by": "UNVERIFIED PLACEHOLDER"
   },
   {
-    "id": "placeholder-010",
+    "id": "quran-13-28",
     "source_type": "quran",
-    "reference": "PLACEHOLDER - replace with verified reference",
+    "reference": "Surah Ar-Ra'd 13:28",
     "themes": ["anxiety"],
-    "arabic": "[Arabic placeholder]",
-    "translation": "Placeholder passage about anxiety and finding peace through remembrance. Replace with verified text from an authentic source before use.",
-    "translator": "PLACEHOLDER",
-    "context_note": "Placeholder. Replace before use.",
-    "verified_by": "UNVERIFIED PLACEHOLDER"
+    "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "translation": "those who believe and whose hearts find comfort in the remembrance of Allah. Surely in the remembrance of Allah do hearts find comfort.",
+    "translator": "Dr. Mustafa Khattab",
+    "context_note": "The believer's heart finds rest and tranquility in the remembrance of Allah.",
+    "verified_by": "quran.com (Dr. Mustafa Khattab)"
   },
   {
-    "id": "placeholder-011",
-    "source_type": "hadith",
-    "reference": "PLACEHOLDER - replace with verified reference",
+    "id": "quran-2-286",
+    "source_type": "quran",
+    "reference": "Surah Al-Baqarah 2:286",
     "themes": ["anxiety"],
-    "arabic": "[Arabic placeholder]",
-    "translation": "Placeholder passage about overcoming anxiety and worry with faith. Replace with verified text from an authentic source before use.",
-    "translator": "PLACEHOLDER",
-    "context_note": "Placeholder. Replace before use.",
-    "verified_by": "UNVERIFIED PLACEHOLDER"
+    "arabic": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًۭا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
+    "translation": "Allah does not require of any soul more than what it can afford. All good will be for its own benefit, and all evil will be to its own loss. ˹The believers pray,˺ “Our Lord! Do not punish us if we forget or make a mistake. Our Lord! Do not place a burden on us like the one you placed on those before us. Our Lord! Do not burden us with what we cannot bear. Pardon us, forgive us, and have mercy on us. You are our ˹only˺ Guardian. So grant us victory over the disbelieving people.”",
+    "translator": "Dr. Mustafa Khattab",
+    "context_note": "Allah burdens no soul beyond its capacity, and the believers pray for pardon, forgiveness, and mercy.",
+    "verified_by": "quran.com (Dr. Mustafa Khattab)"
   },
   {
-    "id": "placeholder-012",
+    "id": "quran-65-3",
+    "source_type": "quran",
+    "reference": "Surah At-Talaq 65:3",
+    "themes": ["anxiety", "hope"],
+    "arabic": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ۚ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ ۚ إِنَّ ٱللَّهَ بَـٰلِغُ أَمْرِهِۦ ۚ قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍۢ قَدْرًۭا",
+    "translation": "and provide for them from sources they could never imagine. And whoever puts their trust in Allah, then He ˹alone˺ is sufficient for them. Certainly Allah achieves His Will. Allah has already set a destiny for everything.",
+    "translator": "Dr. Mustafa Khattab",
+    "context_note": "Whoever is mindful of Allah and trusts in Him is given provision from unexpected sources, and Allah suffices them.",
+    "verified_by": "quran.com (Dr. Mustafa Khattab)"
+  },
+  {
+    "id": "quran-94-5",
+    "source_type": "quran",
+    "reference": "Surah Ash-Sharh 94:5",
+    "themes": ["anxiety", "hope"],
+    "arabic": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+    "translation": "So, surely with hardship comes ease.",
+    "translator": "Dr. Mustafa Khattab",
+    "context_note": "With every hardship comes ease, a promise Allah affirms through repetition.",
+    "verified_by": "quran.com (Dr. Mustafa Khattab)"
+  },
+  {
+    "id": "quran-94-6",
+    "source_type": "quran",
+    "reference": "Surah Ash-Sharh 94:6",
+    "themes": ["anxiety", "hope"],
+    "arabic": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا",
+    "translation": "Surely with ˹that˺ hardship comes ˹more˺ ease.",
+    "translator": "Dr. Mustafa Khattab",
+    "context_note": "With every hardship comes ease, a promise Allah affirms through repetition.",
+    "verified_by": "quran.com (Dr. Mustafa Khattab)"
+  },
+  {
+    "id": "bukhari-6369",
     "source_type": "dua",
-    "reference": "PLACEHOLDER - replace with verified reference",
+    "reference": "Sahih al-Bukhari 6369",
     "themes": ["anxiety"],
-    "arabic": "[Arabic placeholder]",
-    "translation": "Placeholder supplication for relief from anxiety and distress. Replace with verified text from an authentic source before use.",
-    "translator": "PLACEHOLDER",
-    "context_note": "Placeholder. Replace before use.",
-    "verified_by": "UNVERIFIED PLACEHOLDER"
+    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ",
+    "translation": "The Prophet (ﷺ) used to say, \"O Allah! I seek refuge with You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from being heavily in debt and from being overpowered by (other) men.\"",
+    "translator": "sunnah.com",
+    "grade": "Sahih",
+    "context_note": "The Prophet's supplication seeking refuge from worry, grief, weakness, laziness, cowardice, miserliness, debt, and being overpowered by others.",
+    "verified_by": "sunnah.com"
   },
   {
     "id": "placeholder-013",
