@@ -105,7 +105,7 @@ async function sendMessage(text) {
     if (data.is_crisis) {
       appendCrisis(data.response);
     } else {
-      appendBotText(data.response);
+      appendBotTurn(data.response, data.passage, data.outro);
       if (data.sources && data.sources.length > 0) {
         appendSources(data.sources);
       }
@@ -126,6 +126,19 @@ async function sendMessage(text) {
 
 /* ---- Render helpers ---- */
 
+/* Bot avatar shown beside thread messages — the Sakinah logo mark. */
+function makeBotAvatar() {
+  const avatar = document.createElement('div');
+  avatar.className = 'msg-avatar';
+  avatar.setAttribute('aria-hidden', 'true');
+  const img = document.createElement('img');
+  img.className = 'msg-avatar__img';
+  img.src = 'assets/logo-mark.png';
+  img.alt = '';
+  avatar.appendChild(img);
+  return avatar;
+}
+
 function appendUserBubble(text) {
   const row = document.createElement('div');
   row.className = 'msg-row msg-row--user';
@@ -140,10 +153,7 @@ function appendBotText(text) {
   const row = document.createElement('div');
   row.className = 'msg-row msg-row--bot';
 
-  const avatar = document.createElement('div');
-  avatar.className = 'msg-avatar';
-  avatar.setAttribute('aria-hidden', 'true');
-  avatar.textContent = 'س';
+  const avatar = makeBotAvatar();
 
   const bubble = document.createElement('div');
   bubble.className = 'bubble bubble--bot';
@@ -154,14 +164,76 @@ function appendBotText(text) {
   messagesEl.appendChild(row);
 }
 
+/* A full bot reply: one avatar, then a vertical stack of
+   intro bubble → verse card → outro bubble. */
+function appendBotTurn(intro, passage, outro) {
+  const row = document.createElement('div');
+  row.className = 'msg-row msg-row--bot msg-row--turn';
+
+  const avatar = makeBotAvatar();
+
+  const stack = document.createElement('div');
+  stack.className = 'bot-stack';
+
+  if (intro) {
+    const introBubble = document.createElement('div');
+    introBubble.className = 'bubble bubble--bot';
+    introBubble.textContent = intro;
+    stack.appendChild(introBubble);
+  }
+
+  if (passage) {
+    stack.appendChild(buildVerseCard(passage));
+  }
+
+  if (outro) {
+    const outroBubble = document.createElement('div');
+    outroBubble.className = 'bubble bubble--bot';
+    outroBubble.textContent = outro;
+    stack.appendChild(outroBubble);
+  }
+
+  row.appendChild(avatar);
+  row.appendChild(stack);
+  messagesEl.appendChild(row);
+}
+
+/* The styled passage card: verbatim Arabic (RTL) + translation + reference. */
+function buildVerseCard(passage) {
+  const card = document.createElement('div');
+  card.className = 'verse-card';
+
+  if (passage.arabic) {
+    const ar = document.createElement('div');
+    ar.className = 'verse-card__arabic';
+    ar.setAttribute('lang', 'ar');
+    ar.setAttribute('dir', 'rtl');
+    ar.textContent = passage.arabic;
+    card.appendChild(ar);
+  }
+
+  if (passage.translation) {
+    const tr = document.createElement('div');
+    tr.className = 'verse-card__translation';
+    tr.textContent = '“' + passage.translation + '”';
+    card.appendChild(tr);
+  }
+
+  if (passage.reference) {
+    const ref = document.createElement('div');
+    ref.className = 'verse-card__ref';
+    ref.textContent = passage.reference;
+    card.appendChild(ref);
+  }
+
+  return card;
+}
+
 function appendTyping() {
   const row = document.createElement('div');
   row.className = 'msg-row msg-row--bot';
 
-  const avatar = document.createElement('div');
-  avatar.className = 'msg-avatar';
-  avatar.setAttribute('aria-hidden', 'true');
-  avatar.textContent = 'س';
+  const avatar = makeBotAvatar();
 
   const indicator = document.createElement('div');
   indicator.className = 'typing-indicator';
@@ -212,10 +284,7 @@ function appendCrisis(text) {
   const row = document.createElement('div');
   row.className = 'msg-row msg-row--bot';
 
-  const avatar = document.createElement('div');
-  avatar.className = 'msg-avatar';
-  avatar.setAttribute('aria-hidden', 'true');
-  avatar.textContent = 'س';
+  const avatar = makeBotAvatar();
 
   const card = document.createElement('div');
   card.className = 'crisis-notice';

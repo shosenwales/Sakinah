@@ -30,6 +30,8 @@ class ChatResponse(BaseModel):
     sources: list[dict]
     is_crisis: bool
     disclaimer: str
+    outro: str | None = None
+    passage: dict | None = None
 
 
 @app.post("/chat", response_model=ChatResponse)

@@ -1,9 +1,11 @@
 """
 compose.py — template-based response composition.
 
-Picks a template for the primary theme of the top retrieved passage,
-slots in the verbatim translation and reference, and appends the disclaimer.
-No text is generated or paraphrased — only the template wrapper changes.
+Picks a template for the primary theme of the top retrieved passage and wraps
+the passage in empathetic framing: an `intro` before it and an `outro` after.
+The passage itself (verbatim Arabic, translation, reference) is returned as
+structured data so the front end can render it as a styled verse card.
+No source text is generated or paraphrased — only the framing changes.
 """
 
 import json
@@ -20,10 +22,10 @@ DISCLAIMER = (
     "mental health professional. For serious concerns, please consult a qualified person."
 )
 
-FALLBACK_TEMPLATE = (
-    "Here is a passage that may offer some comfort:\n\n"
-    '"{translation}"\n— {reference}'
-)
+FALLBACK_TEMPLATE = {
+    "intro": "Here is a passage that may offer some comfort:",
+    "outro": "",
+}
 
 
 def _load():
@@ -36,13 +38,17 @@ def _load():
 def compose(retrieved: list[dict]) -> dict:
     """
     Build a response from the top retrieved passage.
-    Returns {"response": str, "sources": list[dict], "is_crisis": False, "disclaimer": str}.
+    Returns {"response", "outro", "passage", "sources", "is_crisis", "disclaimer"}.
+    `passage` carries the verbatim Arabic/translation/reference for the verse card,
+    or None when there is nothing to show.
     """
     _load()
 
     if not retrieved:
         return {
             "response": "I'm here with you. Could you tell me a little more about what you're feeling?",
+            "outro": "",
+            "passage": None,
             "sources": [],
             "is_crisis": False,
             "disclaimer": DISCLAIMER,
@@ -50,12 +56,14 @@ def compose(retrieved: list[dict]) -> dict:
 
     top = retrieved[0]
     theme = top["themes"][0] if top["themes"] else None
+    template = _pick_template(theme)
 
-    template_str = _pick_template(theme)
-    response_text = template_str.format(
-        translation=top["translation"],
-        reference=top["reference"],
-    )
+    passage = {
+        "arabic": top["arabic"],
+        "translation": top["translation"],
+        "reference": top["reference"],
+        "source_type": top["source_type"],
+    }
 
     sources = [
         {
@@ -69,15 +77,16 @@ def compose(retrieved: list[dict]) -> dict:
     ]
 
     return {
-        "response": response_text,
+        "response": template["intro"],
+        "outro": template["outro"],
+        "passage": passage,
         "sources": sources,
         "is_crisis": False,
         "disclaimer": DISCLAIMER,
     }
 
 
-def _pick_template(theme: str | None) -> str:
+def _pick_template(theme: str | None) -> dict:
     if theme and theme in _templates:
-        options = _templates[theme]
-        return random.choice(options)["template"]
+        return random.choice(_templates[theme])
     return FALLBACK_TEMPLATE

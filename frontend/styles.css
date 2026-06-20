@@ -337,6 +337,18 @@ a:hover { color: var(--teal); }
 .msg-row--bot { align-items: flex-end; }
 .msg-row--user { justify-content: flex-end; }
 
+/* A multi-part bot turn: avatar at top, stacked bubbles + verse card below */
+.msg-row--turn { align-items: flex-start; }
+.bot-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 88%;
+}
+.bot-stack .bubble { max-width: 100%; }
+
 @keyframes msg-in {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -347,15 +359,19 @@ a:hover { color: var(--teal); }
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--sage);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  font-family: var(--font-serif);
-  font-size: 11px;
+  overflow: hidden;
   flex-shrink: 0;
   margin-bottom: 2px;
+}
+.msg-avatar__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
 }
 
 /* Bubble */

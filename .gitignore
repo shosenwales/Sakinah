@@ -1,5 +1,6 @@
 BUILD_PLAN.md
 CLAUDE.md
+docs/
 
 # Generated index — rebuild with: python backend/build_index.py
 data/embeddings.npy
